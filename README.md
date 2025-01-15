@@ -43,5 +43,5 @@ D2 - MRQ
 ```
 
 ## Extras:
-* [extras/TROJKA.sr]() - sigrok session dump with two full frames recorded
-* [extras/Tid-protokoll.pdf]() - mirror for pdf with TID protocol description (source: [https://wiki.carluccio.de/images/7/7a/Tid-protokoll.pdf]())
+* [./extras/TROJKA.sr]() - sigrok session dump with two full frames recorded
+* [./extras/Tid-protokoll.pdf]() - mirror for pdf with TID protocol description (source: [https://wiki.carluccio.de/images/7/7a/Tid-protokoll.pdf]())
