@@ -6,6 +6,7 @@
 #include <Arduino.h>
 
 #define SLAVE_ADDRESS 0x4A
+#define RECEIVE_TIMEOUT_MILLIS 1000
 
 class TidDisplay {
 public:

@@ -101,7 +101,7 @@ void TidDisplay::handleMRQ() {   // this gets executed on first falling edge on 
   bool TidDisplay::waitForData() {
     unsigned long startTime = millis();
     while (!dataReceived) {
-      if (millis() - startTime >= 1000) {
+      if (millis() - startTime >= RECEIVE_TIMEOUT_MILLIS) {
         return false;
       }
     }
