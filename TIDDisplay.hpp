@@ -1,5 +1,5 @@
-#ifndef TID_REPLACE_HPP
-#define TID_REPLACE_HPP
+#ifndef TID_DISPLAY_HPP
+#define TID_DISPLAY_HPP
 
 #include <avr/interrupt.h>
 #include <util/twi.h>
@@ -8,9 +8,9 @@
 #define SLAVE_ADDRESS 0x4A
 #define RECEIVE_TIMEOUT_MILLIS 500
 
-class TidDisplay {
+class TIDDisplay {
 public:
-  static TidDisplay* instance;
+  static TIDDisplay* instance;
 
   struct DisplayData {
     bool dot;
@@ -30,7 +30,7 @@ public:
   using Callback = void (*)();
   using DataCallback = void (*)(const DisplayData&);
 
-  TidDisplay(uint8_t sclPin);
+  TIDDisplay(uint8_t sclPin);
 
   void begin();
   void onBusError(Callback callback);

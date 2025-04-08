@@ -1,16 +1,16 @@
 #include <avr/interrupt.h>
 #include <util/twi.h>
-#include "tid-display.hpp"
+#include "TIDDisplay.hpp"
 
 #define MRQ_PIN 2 
 
-TidDisplay tidDisplay(MRQ_PIN);
+TIDDisplay tidDisplay(MRQ_PIN);
 
 void emergencyReset() {
     asm volatile("jmp 0");
 }
 
-void dataReceived(const TidDisplay::DisplayData& data) {
+void dataReceived(const TIDDisplay::DisplayData& data) {
     if (data.rds) Serial.print("RDS ");
     if (data.stereo) Serial.print("Stereo ");
     Serial.println();
